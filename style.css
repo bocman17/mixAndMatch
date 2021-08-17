@@ -53,8 +53,8 @@ body {
 
 .card {
     position: relative;
-    height: 175px;
-    width: 125px;
+    height: 200px;
+    width: 150px;
 }
 
 .card:hover {
@@ -133,6 +133,11 @@ body {
     75% {
         transform: rotate(30deg);
     }
+}
+.lion {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
 }
 
 .card-back {
