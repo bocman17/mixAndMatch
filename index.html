@@ -21,220 +21,235 @@
         VICTORY
         <span class="overlay-text-small">Click to Restart</span>
     </div>
+    <!-- pop up -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">What is this animal called?</div>
+        </div>
+        <form action="/" method="GET" id="answer" name="quiz">
+        <div class="modal-body">
+            <input type="text" id="modal-input" name="question" autocomplete="off">
+            <input type="submit" id="modal-submit" value="Submit">
+        </div>
+        </form>
+        <div id="check"></div>
+    </div>
+    <div id="overlay-popup"></div>
+    <!--  -->
     <div class="game-container">
         <div class="game-info-container">
             <div class="game-info">
-                Time <span id="time-remaining">100</span>
+                Time <span id="time-remaining">600</span>
             </div>
             <div class="game-info">
                 Flips <span id="flips">0</span>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="lion">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/lion.jpg" alt="" class="card-value lion">
+                <img src="Assets/Images/lion.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="lion">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/lion.jpg" alt="" class="card-value lion">
+                <img src="Assets/Images/lion.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="crocodile">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Lion2.png" alt="" class="card-value lion">
+                <img src="Assets/Images/crocodile.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="crocodile">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Lion2.png" alt="" class="card-value lion">
+                <img src="Assets/Images/crocodile.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="monkey">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/monkey.jpg" alt="" class="card-value lion">
+                <img src="Assets/Images/monkey.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="monkey">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/monkey.jpg" alt="" class="card-value lion">
+                <img src="Assets/Images/monkey.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="zebra">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Eye.png" alt="" class="card-value">
+                <img src="Assets/Images/zebra.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="zebra">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Eye.png" alt="" class="card-value">
+                <img src="Assets/Images/zebra.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="elephant">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Bones.png" alt="" class="card-value">
+                <img src="Assets/Images/elephant.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="elephant">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Bones.png" alt="" class="card-value">
+                <img src="Assets/Images/elephant.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="rhino">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Ghost.png" alt="" class="card-value">
+                <img src="Assets/Images/rhino.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="rhino">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Ghost.png" alt="" class="card-value">
+                <img src="Assets/Images/rhino.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="hippo">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Cauldron.png" alt="" class="card-value">
+                <img src="Assets/Images/hippo.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="hippo">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Cauldron.png" alt="" class="card-value">
+                <img src="Assets/Images/hippo.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="giraffe">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Pumpkin.png" alt="" class="card-value">
+                <img src="Assets/Images/giraffe.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-framework="giraffe">
             <div class="card-back card-face">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-top-right">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-left">
-                <img src="Assets/Images/Cobweb.png" alt="" class="cob-web cob-web-bottom-right">
-                <img src="Assets/Images/Spider.png" alt="" class="spider">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-top-right">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-left">
+                <img src="Assets/Images/corner.png" alt="" class="corner corner-bottom-right">
+                <img src="Assets/Images/africaCover.png" alt="" class="spider">
             </div>
             <div class="card-front card-face">
-                <img src="Assets/Images/Pumpkin.png" alt="" class="card-value">
+                <img src="Assets/Images/giraffe.jpg" alt="" class="card-value imgFront">
 
             </div>
         </div>

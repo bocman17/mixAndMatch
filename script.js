@@ -38,6 +38,10 @@ class MixOrMatch {
         this.timeRemaining = totalTime;
         this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
+        this.popUp = document.getElementById('modal')
+        this.overlayPopUp = document.getElementById('overlay-popup')
+        this.textAnswer = document.getElementById('modal-input').value
+        this.submit = document.getElementById('modal-submit')
         this.audioController = new AudioController();
     }
     startGame() {
@@ -90,9 +94,31 @@ class MixOrMatch {
         card1.classList.add('matched');
         card2.classList.add('matched');
         this.audioController.match();
-        if(this.matchedCards.length === this.cardsArray.length) {
-            this.victory()
-        };
+        setTimeout(() => {
+            this.popUp.classList.add('active');
+            this.overlayPopUp.classList.add('active');
+        }, 1000)
+        this.checkAnswer()
+        
+        // if( (this.matchedCards.length === this.cardsArray.length) && (this.busy = true)) {
+        //     this.victory()
+        // } 
+    }
+    checkAnswer() {
+        this.submit.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.busy = true
+            if( this.matchedCards[this.matchedCards.length - 1].dataset.framework === document.getElementById('modal-input').value) {
+                this.popUp.classList.remove('active');
+                this.overlayPopUp.classList.remove('active');
+                document.getElementById('modal-input').value = ""
+            } else {console.log(this.matchedCards[this.matchedCards.length - 1].dataset.framework)}
+            if( (this.matchedCards.length === this.cardsArray.length) && (this.busy = true)) {
+                this.victory()
+            } 
+            this.busy = false
+        })
+        
     }
     cardMisMatch(card1, card2) {
         this.busy = true;
@@ -102,8 +128,12 @@ class MixOrMatch {
             this.busy = false;
         }, 1000)
     }
+    // getAnswer() {
+    //     return 
+    // }
     getCardType(card) {
-        return card.getElementsByClassName('card-value')[0].src;
+        // return card.getElementsByClassName('card-value')[0].src;
+        return card.dataset.framework
     }
     startCountDown() {
         return setInterval(() => {
@@ -141,7 +171,7 @@ class MixOrMatch {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(100, cards)
+    let game = new MixOrMatch(600, cards)
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
@@ -161,6 +191,13 @@ if (document.readyState === 'loading') {
 } else {
     ready();
 }
+
+// document.getElementById('modal-submit').addEventListener('click', (e) => { e.preventDefault()
+//     let answer = document.getElementById('modal-input').value
+//     console.log(answer)}
+// );
+
+
 
 // let audioController = new AudioController();
 //             audioController.startMusic();
