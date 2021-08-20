@@ -163,7 +163,7 @@ body {
     transform: scale(1);
 } */
 
-.cob-web {
+/* .cob-web {
     position: absolute;
     width: 47px;
     height: 47px;
@@ -211,7 +211,7 @@ body {
 .card-back:hover .spider {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-}
+} */
 
 @media (max-width: 1200px) {
     .game-container {
