@@ -3,16 +3,21 @@ class AudioController {
         this.bgMusic = new Audio();
         this.flipSound = new Audio ('Assets/Audio/flip.wav');
         this.matchSound = new Audio ('Assets/Audio/match.wav');
+        this.incredibleJobSound = new Audio ('Assets/Audio/incredibleJob.mp3');
+        this.wrongSound = new Audio ('Assets/Audio/wrongSoundEffect.mp3')
         this.victorySound = new Audio ('Assets/Audio/victory.wav');
+        this.congratsSound = new Audio ('Assets/Audio/congrats.wav');
         this.gameOverSound = new Audio ('Assets/Audio/gameOver.wav');
         this.bgMusic.volume = 0.5;
         this.bgMusic.loop = true;
     }
     startMusic() {
+        this.stopMusic();
         this.bgMusic.play();
     }
     stopMusic() {
         this.bgMusic.pause();
+        this.congratsSound.pause()
         this.bgMusic.currentTime = 0;
     }
     flip() {
@@ -21,9 +26,18 @@ class AudioController {
     match() {
         this.matchSound.play();
     }
+    rightAnswer() {
+        this.incredibleJobSound.play();
+    }
+    wrongAnswer() {
+        this.wrongSound.play()
+    }
     victory() {
         this.stopMusic();
         this.victorySound.play();
+    }
+    congrats() {
+        this.congratsSound.play()
     }
     gameOver() {
         this.stopMusic();
@@ -96,7 +110,11 @@ class MixOrMatch {
         this.audioController.match();
         setTimeout(() => {
             this.popUp.classList.add('active');
+            this.popUp.classList.remove('right');
+            this.popUp.classList.remove('wrong');
             this.overlayPopUp.classList.add('active');
+            document.getElementById('title-id').innerText = "What is this animal called?"
+            document.getElementById('modal-input').focus();
         }, 1000)
         this.checkAnswer()
         
@@ -108,13 +126,26 @@ class MixOrMatch {
         this.submit.addEventListener('click', (e) => {
             e.preventDefault();
             this.busy = true
-            if( this.matchedCards[this.matchedCards.length - 1].dataset.framework === document.getElementById('modal-input').value) {
-                this.popUp.classList.remove('active');
-                this.overlayPopUp.classList.remove('active');
-                document.getElementById('modal-input').value = ""
-            } else {console.log(this.matchedCards[this.matchedCards.length - 1].dataset.framework)}
+            if( this.matchedCards[this.matchedCards.length - 1].dataset.framework === document.getElementById('modal-input').value.toLowerCase()) {
+                document.getElementById('title-id').innerText = "Correct!"
+                this.popUp.classList.remove('wrong')
+                this.popUp.classList.add('right')
+                this.audioController.rightAnswer()
+                setTimeout(() => {
+                    this.popUp.classList.remove('active');
+                    this.overlayPopUp.classList.remove('active');
+                    document.getElementById('modal-input').value = ""
+                }, 1000)                              
+            } else {
+                this.audioController.wrongAnswer()
+                setTimeout(() => {document.getElementById('title-id').innerText = "Wrong! Try again!"
+                this.popUp.classList.add('wrong')}, 500)
+                
+            }
+
             if( (this.matchedCards.length === this.cardsArray.length) && (this.busy = true)) {
-                this.victory()
+                setTimeout(() => {this.victory()}, 1000)
+                
             } 
             this.busy = false
         })
@@ -152,6 +183,9 @@ class MixOrMatch {
         clearInterval(this.countDown);
         this.audioController.victory();
         document.getElementById('victory-text').classList.add('visible');
+        setTimeout(() => {
+            this.audioController.congrats()
+        }, 1700);
 
     }
 
