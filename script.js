@@ -125,8 +125,9 @@ class MixOrMatch {
     checkAnswer() {
         this.submit.addEventListener('click', (e) => {
             e.preventDefault();
-            this.busy = true
+            this.busy = false;
             if( this.matchedCards[this.matchedCards.length - 1].dataset.framework === document.getElementById('modal-input').value.toLowerCase()) {
+                this.busy = true
                 document.getElementById('title-id').innerText = "Correct!"
                 this.popUp.classList.remove('wrong')
                 this.popUp.classList.add('right')
@@ -138,12 +139,13 @@ class MixOrMatch {
                 }, 1000)                              
             } else {
                 this.audioController.wrongAnswer()
+                this.busy = false
                 setTimeout(() => {document.getElementById('title-id').innerText = "Wrong! Try again!"
                 this.popUp.classList.add('wrong')}, 500)
                 
             }
 
-            if( (this.matchedCards.length === this.cardsArray.length) && (this.busy = true)) {
+            if( (this.matchedCards.length === this.cardsArray.length) && (this.busy = true) && (this.matchedCards[this.matchedCards.length - 1].dataset.framework === document.getElementById('modal-input').value.toLowerCase())) {
                 setTimeout(() => {this.victory()}, 1000)
                 
             } 
