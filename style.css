@@ -68,6 +68,7 @@ body {
     border-width: 3px;
     border-style: solid;
     /* border-color: black; */
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out;
 }
 
@@ -78,34 +79,40 @@ body {
 }
 
 .corner-top-left {
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     top: 0;
     left: 0;
 }
 
 .corner-top-right {
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     top: 0;
     right: 0;
 }
 
 .corner-bottom-left {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     bottom: 0;
     left: 0;
 }
 
 .corner-bottom-right {
+    -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
     bottom: 0;
     right: 0;
 }
 
 .card.visible .card-back {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
 
 .card.visible .card-front {
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
 }
 
@@ -175,15 +182,19 @@ body {
 .card-front {
     background: transparent;
     border-color: black;
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
 .card-value {
+    -webkit-transition: transform 100ms ease-in-out;
     transition: transform 100ms ease-in-out;
+    -webkit-transform: scale(1);
     transform: scale(1);
 }
 
 .card-front:hover .card-value {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -194,13 +205,16 @@ body {
 
 .spider {
     align-self: flex-start;
+    -webkit-transform: translateY(20px);
     transform: translateY(20px);
+    -webkit-transition: transform 100ms ease-in-out;
     transition: transform 100ms ease-in-out;
     width: 100px;
     height: 150px;
 }
 
 .card-back:hover .spider {
+    -webkit-transform: scale(1.2) translateY(20px);
     transform: scale(1.2) translateY(20px);
 }
 /* popUp */
