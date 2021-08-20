@@ -77,8 +77,8 @@ body {
 }
 
 .card.visible .card-back {
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-179.9deg);
+    transform: rotateY(-179.9deg);
 }
 
 .card.visible .card-front {
@@ -148,8 +148,8 @@ body {
 .card-front {
     background-color: #FFBB89;
     border-color: #333;
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(179.9deg);
+    transform: rotateY(179.9deg);
 }
 
 .card-value {
@@ -176,8 +176,8 @@ body {
 }
 
 .cob-web-top-left {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
+    -webkit-transform: rotate(269.9deg);
+    transform: rotate(269.9deg);
     top: 0;
     left: 0;
 }
@@ -188,15 +188,15 @@ body {
 }
 
 .cob-web-bottom-left {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate(179.9deg);
+    transform: rotate(179.9deg);
     bottom: 0;
     left: 0;
 }
 
 .cob-web-bottom-right {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -webkit-transform: rotate(89.9deg);
+    transform: rotate(89.9deg);
     bottom: 0;
     right: 0;
 }
