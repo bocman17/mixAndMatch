@@ -140,10 +140,10 @@ body {
     }
 }
 
-.card-back {
+/* .card-back {
     background-color: black;
     border-color: #FF6D00;
-}
+} */
 
 /* .card-front {
     background-color: #FFBB89;
@@ -152,16 +152,16 @@ body {
     transform: rotateY(179.9deg);
 } */
 
-.card-value {
+/* .card-value {
     transition: transform 100ms ease-in-out;
     -webkit-transform: scale(.9);
     transform: scale(.9);
-}
+} */
 
-.card-front:hover .card-value {
+/* .card-front:hover .card-value {
     -webkit-transform: scale(1);
     transform: scale(1);
-}
+} */
 
 .cob-web {
     position: absolute;
