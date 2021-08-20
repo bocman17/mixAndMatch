@@ -145,12 +145,12 @@ body {
     border-color: #FF6D00;
 }
 
-.card-front {
+/* .card-front {
     background-color: #FFBB89;
     border-color: #333;
     -webkit-transform: rotateY(179.9deg);
     transform: rotateY(179.9deg);
-}
+} */
 
 .card-value {
     transition: transform 100ms ease-in-out;
@@ -213,7 +213,7 @@ body {
     transform: translateY(0);
 }
 
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
     .game-container {
         grid-template-columns: repeat(4, auto);
     }
@@ -231,6 +231,6 @@ body {
 
     .game-info-container {
         flex-direction: column;
-        align-items: center; */
+        align-items: center;
     }
 }
