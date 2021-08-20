@@ -124,7 +124,7 @@ body {
     align-items: center;
     z-index: 100;
     color: #FF6D00;
-    font-family: serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .overlay-text-small {
