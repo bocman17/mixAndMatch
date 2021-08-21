@@ -108,6 +108,7 @@ class MixOrMatch {
         card1.classList.add('matched');
         card2.classList.add('matched');
         this.audioController.match();
+        document.getElementById('gameContainer').classList.add('inactive');
         setTimeout(() => {
             this.popUp.classList.add('active');
             this.popUp.classList.remove('right');
@@ -135,6 +136,7 @@ class MixOrMatch {
                 setTimeout(() => {
                     this.popUp.classList.remove('active');
                     this.overlayPopUp.classList.remove('active');
+                    document.getElementById('gameContainer').classList.remove('inactive');
                     document.getElementById('modal-input').value = ""
                 }, 1000)                              
             } else {

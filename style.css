@@ -5,6 +5,7 @@
 html {
     min-height: 100vh;
     cursor: url("Assets/Cursors/Ghost.cur"), auto;
+    overflow: hidden;
 }
 
 body {
@@ -299,6 +300,10 @@ input[type="text"] {
 #overlay-popup.active {
     opacity: 1;
     pointer-events: all;
+}
+
+.inactive {
+    pointer-events: none;
 }
 
 /* media */
