@@ -45,6 +45,7 @@ body {
     justify-content: center;
     -webkit-perspective: 500px;
     perspective: 500px;
+    z-index: 999999;
 }
 
 .card {
@@ -206,7 +207,7 @@ body {
 }
 
 .card-back {
-    background-color: darkred;
+    /* background-color: darkred; */
     border-color: rgb(255, 123, 0);
     /* opacity: 0.9; */
 }
