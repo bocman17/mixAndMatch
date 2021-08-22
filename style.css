@@ -43,6 +43,7 @@ body {
     grid-gap: 10px;
     margin: 50px;
     justify-content: center;
+    -webkit-perspective: 500px;
     perspective: 500px;
 }
 
@@ -69,6 +70,7 @@ body {
     border-width: 3px;
     border-style: solid;
     /* border-color: black; */
+    -webkit-transition: transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out;
 }
 
@@ -79,38 +81,45 @@ body {
 }
 
 .corner-top-left {
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     top: 0;
     left: 0;
 }
 
 .corner-top-right {
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     top: 0;
     right: 0;
 }
 
 .corner-bottom-left {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     bottom: 0;
     left: 0;
 }
 
 .corner-bottom-right {
+    -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
     bottom: 0;
     right: 0;
 }
 
 .card.visible .card-back {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 }
 
 .card.visible .card-front {
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
 }
 
 .card.matched .card-value {
+    -webkit-animation: dance 1s linear infinite 500ms;
     animation: dance 1s linear infinite 500ms;
 }
 
@@ -135,7 +144,19 @@ body {
 .overlay-text.visible {
     display: flex;
     flex-direction: column;
+    -webkit-animation: overlay-grow 500ms forwards;
     animation: overlay-grow 500ms forwards;
+}
+
+@-webkit-keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, .8);
+        font-size: 10em;
+    }
 }
 
 @keyframes overlay-grow {
@@ -149,6 +170,20 @@ body {
     }
 }
 
+ @-webkit-keyframes dance {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.05);
+    }
+    75% {
+        transform: scale(1.1);
+    } 
+
+    
+ }
+
  @keyframes dance {
     0%, 100% {
         transform: scale(1);
@@ -159,6 +194,8 @@ body {
     75% {
         transform: scale(1.1);
     } 
+
+    
  }
  
 .imgFront {
@@ -176,15 +213,19 @@ body {
 .card-front {
     background: transparent;
     border-color: black;
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
 .card-value {
+    -webkit-transition: transform 100ms ease-in-out;
     transition: transform 100ms ease-in-out;
+    -webkit-transform: scale(1);
     transform: scale(1);
 }
 
 .card-front:hover .card-value {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -195,13 +236,16 @@ body {
 
 .spider {
     align-self: flex-start;
+    -webkit-transform: translateY(20px);
     transform: translateY(20px);
+    -webkit-transition: transform 100ms ease-in-out;
     transition: transform 100ms ease-in-out;
     width: 100px;
     height: 150px;
 }
 
 .card-back:hover .spider {
+    -webkit-transform: scale(1.2) translateY(20px);
     transform: scale(1.2) translateY(20px);
 }
 /* popUp */
@@ -210,6 +254,7 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     border: 1px solid black;
     border-radius: 10px;
@@ -317,7 +362,7 @@ input[type="text"] {
         align-items: center;
     }
 
-    @keyframes overlay-grow {
+    @-webkit-keyframes overlay-grow {
         from {
             background-color: rgba(0, 0, 0, 0);
             font-size: 0;
@@ -325,6 +370,17 @@ input[type="text"] {
         to {
             background-color: rgba(0, 0, 0, .8);
             font-size: 5em;
+        }
+    }
+
+    @keyframes overlay-grow {
+        from {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 0;
+        }
+        to {
+            background-color: rgba(0, 0, 0, .8);
+            font-size: 2em;
         }
     }
 
@@ -338,6 +394,17 @@ input[type="text"] {
     .game-info-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    @-webkit-keyframes overlay-grow {
+        from {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 0;
+        }
+        to {
+            background-color: rgba(0, 0, 0, .8);
+            font-size: 2em;
+        }
     }
 
     @keyframes overlay-grow {
