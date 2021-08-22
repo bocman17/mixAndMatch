@@ -52,7 +52,9 @@ body {
     position: relative;
     height: 200px;
     width: 150px;
-    z-index: 99999999999999999999;
+
+    -webkit-transform: translateZ(9px);
+    transform: translateZ(9px);
 }
 
 .card:hover {
