@@ -53,8 +53,7 @@ body {
     height: 200px;
     width: 150px;
 
-    -webkit-transform: translateZ(9px);
-    transform: translateZ(9px);
+    
 }
 
 .card:hover {
@@ -77,6 +76,8 @@ body {
     -webkit-transition: -webkit-transform 500ms ease-in-out;
     -webkit-transition: transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out;
+    -webkit-transform: translateZ(9px);
+    transform: translateZ(9px);
 }
 
 .corner {
