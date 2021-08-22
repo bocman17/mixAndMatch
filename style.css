@@ -70,6 +70,7 @@ body {
     border-width: 3px;
     border-style: solid;
     /* border-color: black; */
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
     -webkit-transition: transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out;
 }
@@ -218,6 +219,8 @@ body {
 }
 
 .card-value {
+    -webkit-transition: -webkit-transform 100ms ease-in-out;
+    -webkit-transition: -webkit-transform 100ms ease-in-out;
     -webkit-transition: transform 100ms ease-in-out;
     transition: transform 100ms ease-in-out;
     -webkit-transform: scale(1);
@@ -238,6 +241,7 @@ body {
     align-self: flex-start;
     -webkit-transform: translateY(20px);
     transform: translateY(20px);
+    -webkit-transition: -webkit-transform 100ms ease-in-out;
     -webkit-transition: transform 100ms ease-in-out;
     transition: transform 100ms ease-in-out;
     width: 100px;
