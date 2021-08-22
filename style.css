@@ -206,7 +206,7 @@ body {
 }
 
 .card-back {
-    /* background-color: darkred; */
+    background-color: darkred;
     border-color: rgb(255, 123, 0);
     /* opacity: 0.9; */
 }
