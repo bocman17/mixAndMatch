@@ -45,7 +45,7 @@ body {
     justify-content: center;
     -webkit-perspective: 500px;
     perspective: 500px;
-    z-index: 999999;
+    /* z-index: 999999; */
 }
 
 .card {
@@ -76,8 +76,8 @@ body {
     -webkit-transition: -webkit-transform 500ms ease-in-out;
     -webkit-transition: transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out;
-    -webkit-transform: translateZ(9px);
-    transform: translateZ(9px);
+    /* -webkit-transform: translateZ(9px);
+    transform: translateZ(9px); */
 }
 
 .corner {
@@ -211,7 +211,7 @@ body {
 }
 
 .card-back {
-    background-color: darkred;
+    /* background-color: darkred; */
     border-color: rgb(255, 123, 0);
     /* opacity: 0.9; */
 }
